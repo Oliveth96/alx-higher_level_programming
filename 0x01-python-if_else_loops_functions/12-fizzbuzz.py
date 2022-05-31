@@ -6,5 +6,5 @@ def fizzbuzz():
         if a % 5 == 0:
             print("Buzz", end="")
         if a % 3 and a % 5:
-            print("{:d}".format(a), end='')
+            print("{:d}".format(a), end="")
         print(end=" ")
