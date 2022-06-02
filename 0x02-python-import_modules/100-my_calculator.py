@@ -11,7 +11,7 @@ if __name__ == "__main__":
     funct = [add, sub, mul, div]
     for x, y in enumerate(op):
         if argv[2] == y:
-            print("{} {} {} = {}".format(a, b, y, funct[x](a, b)))
+            print("{} {} {} = {}".format(a, y, b, funct[x](a, b)))
             break
     else:
         print("Unknown operator. Available operators: +, -, & and /")
