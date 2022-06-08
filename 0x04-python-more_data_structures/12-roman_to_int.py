@@ -12,6 +12,7 @@ def roman_to_int(roman_string):
     roman_dictionary = {
         'I': 1,
         'IV': 4,
+        'V': 5,
         'IX': 9,
         'X': 10,
         'L': 50,
