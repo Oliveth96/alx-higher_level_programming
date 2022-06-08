@@ -1,48 +1,34 @@
 #!/usr/bin/python3
-def roman_to_int(roman_string):
-    # for fail check, none, not a string
-    if not roman_string:
-        return 0
-    if not isinstance(roman_string, str):
-        return 0
-    if not roman_string.isupper():
-        return 0
+def _reduce(fn, seq, init=0):
+    """ Reduce a list to a single value
+    """
+    try:
+        return _reduce(fn, seq[1:], fn(init, seq[0]))
+    except IndexError:
+        return init
 
-    # I created a dictionary for the roman numerals
-    roman_dictionary = {
+
+def roman_to_int(roman_string):
+    """ Convert a Roman numeral to an integer
+    """
+    n2n = {
         'I': 1,
-        'IV': 4,
         'V': 5,
-        'IX': 9,
         'X': 10,
         'L': 50,
         'C': 100,
-        'D': 500,
-        'M': 1000
+        'D': 500
     }
+    try:
+        numbers = list(map(n2n.get, roman_string[::-1]))
+        integer = numbers[0]
+    except (IndexError, KeyError, TypeError):
+        return 0
 
-    result = 0
-    tem = list(roman_string)
+    for i in range(len(numbers[1:])):
+        if numbers[i + 1] >= numbers[i]:
+            integer += numbers[i + 1]
+        else:
+            integer -= numbers[i + 1]
 
-    # to concatenate 4s and 9s
-    if len(tem) > 1:
-        ivix = 0
-        for i in tem:
-            try:
-                if tem[ivix] == 'I' and tem[ivix + 1] == 'V':
-                    tem[ivix:ivix + 2] = [''.join(tem[ivix:ivix + 2])]
-            except IndexError:
-                pass
-            try:
-                if tem[ivix] == 'I' and tem[ivix + 1] == 'X':
-                    tem[ivix:ivix + 2] = [''.join(tem[ivix:ivix + 2])]
-            except IndexError:
-                pass
-            ivix += 1
-
-        # Search my roman dictionary for correct numbers and  add them together
-        for key, value in roman_dictionary.items():
-            for index in tem:
-                if index == key:
-                    result += value
-        return result
+    return integer
