@@ -15,7 +15,7 @@ def roman_to_int(roman_string):
         'IX': 9,
         'X': 10,
         'L': 50,
-        'C': 500,
+        'C': 100,
         'D': 500,
         'M': 1000
     }
