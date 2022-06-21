@@ -68,7 +68,7 @@ class SinglyLinkedList():
                 tmp = tmp.next_node
             new.next_node = tmp.next_node
             tmp.next_node = new
-        
+
     def __str__(self):
         """ Generate a visual representation of a list
         """
