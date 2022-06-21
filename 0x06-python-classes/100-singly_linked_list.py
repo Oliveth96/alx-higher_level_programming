@@ -8,51 +8,67 @@ class Node():
     """
 
     def __init__(self, data, next_node=None):
-        """ Instantiates a node
-        """
-        self.data, self.next_node = data, next_node
+        """Initialization of Node Class"""
+        self.data = data
+        self.next_node = next_node
 
     @property
     def data(self):
-        """" to retrieve it
-        """
+        """Data"""
         return self.__data
 
     @data.setter
-    def data(self, data):
-        """to set it
-        """
-        if not isinstance(data, int):
+    def data(self, DataValue):
+        """Set data"""
+        if type(DataValue) != int:
             raise TypeError("data must be an integer")
-        self.__data = data
+        self.__data = DataValue
 
     @property
     def next_node(self):
-        """" to retrieve it
-        """
+        """Node"""
         return self.__next_node
 
     @next_node.setter
-    def next_node(self, next_node):
-        """to set it
-        """
-        if next_node is not None and not isinstance(next_node, Node):
+    def next_node(self, NodeValue):
+        """set Node"""
+        if NodeValue is not None and not isinstance(NodeValue, Node):
             raise TypeError("next_node must be a Node object")
-        self.__next_node = next_node
+        self.__next_node = NodeValue
 
 
 class SinglyLinkedList():
-    """ The definition of a singly-linked list
-    """
+    """Class SinglyLinkedList"""
     def __init__(self):
-        """ Instantiates a singly-linked list
-        """
+        """Initialization of SinglyLinkedList"""
         self.__head = None
 
-    def __str__(self):
-        """ Generate a visual representation of a list
-        """
+    def sorted_insert(self, DataValue):
+        """Inserts a nodes"""
+        NewNode = Node(DataValue)
+        if self.__head is None:
+            self.__head = NewNode
+            return
+        if DataValue < self.__head.data:
+            NewNode.next_node = self.__head
+            self.__head = NewNode
+            return
+        actual = self.__head
+        while DataValue >= actual.data:
+            prev = actual
+            if actual.next_node:
+                actual = actual.next_node
+            else:
+                actual.next_node = NewNode
+                return
+        prev.next_node = NewNode
+        NewNode.next_node = actual
 
-    def sorted_insert(self, value):
-        """ Inserts a Node into a list sorted in ascending order
-        """
+    def __str__(self):
+        """Class As a String"""
+        strg = ""
+        actual = self.__head
+        while actual:
+            strg += str(actual.data) + "\n"
+            actual = actual.next_node
+        return strg[:-1]
