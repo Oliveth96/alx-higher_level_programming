@@ -37,7 +37,7 @@ class Square():
         return self.__position
 
     @position.setter
-    def position(self, value):
+    def position(self, position):
         """to set it
         """
         if not (isinstance(position, tuple) and
