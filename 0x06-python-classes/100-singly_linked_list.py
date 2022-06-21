@@ -54,6 +54,6 @@ class SinglyLinkedList():
         """ Generate a visual representation of a list
         """
 
-    def sorted_insert(self, Node):
+    def sorted_insert(self, value):
         """ Inserts a Node into a list sorted in ascending order
         """
