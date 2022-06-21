@@ -61,6 +61,6 @@ class Square():
         return self.size ** 2
 
     def my_print(self):
-        """ that prints in stdout the 'Square' 
+        """ that prints in stdout the 'Square'
         """
         print(self)
