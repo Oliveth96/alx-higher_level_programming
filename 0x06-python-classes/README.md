@@ -121,4 +121,4 @@ Public instance method: def area(self): that returns the current square area Squ
 
 
 
-103-magic_class.py; Write the Python class MagicClass that does exactly the same as the following Python bytecode:
+<b>103-magic_class.py<b>; Write the Python class MagicClass that does exactly the same as the following Python bytecode:
