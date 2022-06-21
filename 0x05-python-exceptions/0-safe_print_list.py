@@ -1,11 +1,13 @@
 #!/usr/bin/python3
+from operator import index
+
+
 def safe_print_integer(my_list=[], x=0):
-    c = 0
-    for i in range(x):
-        try:
+    try:
+        for i in range(x):
             print(my_list[i], end='')
-            c += 1
-        except IndexError:
-            break
-    print()
-    return c
+        return x
+    except IndexError:
+        return i
+    finally:
+        print()
