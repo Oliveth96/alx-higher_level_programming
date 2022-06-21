@@ -6,7 +6,6 @@
 class Node():
     """The definition of a singly-linked list node
     """
-
     def __init__(self, data, next_node=None):
         """ Instantiates a node
         """
@@ -44,7 +43,6 @@ class Node():
 class SinglyLinkedList():
     """ The definition of a singly-linked list
     """
-
     def __init__(self):
         """ Instantiates a singly-linked list
         """
