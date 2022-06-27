@@ -3,9 +3,6 @@
 """
 
 
-from curses.textpad import rectangle
-
-
 class Rectangle():
     """An empty definition of a 'Rectangle'
     """
