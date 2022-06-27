@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ The N queens puzzle
-A Module that solves the N queens problem.
 """
 from sys import argv, exit
 
