@@ -15,6 +15,7 @@ class Rectangle():
 
         """ Instantiates a 'Rectangle'
         """
+        type(self).number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -34,6 +35,7 @@ class Rectangle():
     def __del__(self):
         """Sets the del behavior of the Rectangle object.
         """
+        type(self).number_of_instances -= 1
         print("Bye rectangle...")
 
     @property
