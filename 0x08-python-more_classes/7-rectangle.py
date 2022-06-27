@@ -10,6 +10,7 @@ class Rectangle():
     height = True
 
     number_of_instances = 0
+
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
@@ -25,7 +26,7 @@ class Rectangle():
         """Sets the print behavior of the Rectangle object.
         """
         if self.height and self.width:
-            return '\n'.join([self.print_symbol * self.width] * self.height)
+            return '\n'.join([(self.print_symbol) * self.width] * self.height)
         return ""
 
     def __repr__(self):
