@@ -33,7 +33,6 @@ def isvalid(row, col, result):
         return False
     return True
 
-
 if __name__ == "__main__":
     length = len(argv)
     if length != 2:
