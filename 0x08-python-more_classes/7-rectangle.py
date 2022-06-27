@@ -22,10 +22,12 @@ class Rectangle():
 
     def __str__(self):
 
-        """Sets the print behavior of the Rectangle object.
+        """Sets the print behavior of the 'Rectangle' object.
         """
         if self.height and self.width:
-            return '\n'.join([(self.print_symbol) * self.width] * self.height)
+            return '\n'.join(
+                [(self.print_symbol) * self.width] * self.height
+            )
         return ""
 
     def __repr__(self):
