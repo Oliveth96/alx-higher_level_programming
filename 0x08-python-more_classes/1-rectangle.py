@@ -6,8 +6,6 @@
 class Rectangle():
     """An empty definition of a 'Rectangle'
     """
-    width = True
-    height = True
 
     def __init__(self, width=0, height=0):
 
