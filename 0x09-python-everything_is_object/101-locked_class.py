@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 # 101-locked_class.py
 """Defines a locked class."""
+
+
 class LockedClass:
     """
     prevent the user from instantiating new LockedClass attributes
