@@ -14,10 +14,10 @@ def append_after(filename="", search_string="", new_string=""):
     """
 
     newText = ""
-    with open(filename) as a:
-        for line in a:
+    with open(filename) as r:
+        for line in r:
             newText += line
             if search_string in line:
                 newText += new_string
-    with open(filename, 'x') as x:
+    with open(filename, "x") as x:
         x.write(newText)
