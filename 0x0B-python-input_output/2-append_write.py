@@ -6,9 +6,10 @@
 def append_write(filename="", text=""):
     """Appends a string at the end of a text file (UTF8) and returns ..
     Args:
-        filename: The name of the file to append
-        text: The string to apple to the file.
-    Returns: The number of characters added.
+        filename (str): The name of the file to append to.
+        text (str): The string to append to the file.
+    Returns:
+        The number of characters appended.
     """
-    with open(filename, mode="w", encoding="UTF-8") as x:
+    with open(filename, "a", encoding="utf-8") as x:
         return x.write(text)
