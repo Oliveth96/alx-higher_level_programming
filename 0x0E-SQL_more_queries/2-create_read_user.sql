@@ -8,5 +8,5 @@ IDENTIFIED BY 'user_0d_2_pwd';
 
 -- To grant the User SELECT only provilege
 GRANT SELECT
-ON hbtn_0d_2
+ON hbtn_0d_2.*
 TO 'user_0d_2'@'localhost';
