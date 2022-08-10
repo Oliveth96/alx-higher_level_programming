@@ -2,7 +2,7 @@
 -- (in the database hbtn_0d_usa)
 
 --To create the Database - hbtn_0d_usa
-CREATE DATABASEIF NOT EXISTS hbtn_0d_usa;
+CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 
 -- To create the table 'cities' in the database 'hbtn_0d_usa'
 CREATE TABLE IF NOT EXISTS hbtn_0d_usa.cities (
