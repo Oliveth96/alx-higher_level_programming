@@ -3,6 +3,7 @@
 Provides a State class to map to objects in a states table
 """
 
+import sqlalchemy
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
